@@ -16,7 +16,7 @@ namespace Licao11_08_22IBM {
             codigoB = int.Parse(vetor[1]);
 
             precoA = RetornaPreco(codigoA);
-            precoB = RetornaPreco(codigoB);
+            precoB = codigoB;
 
             Console.WriteLine("Total: R$ " + SomaPreco(precoA, precoB).ToString("F2", CultureInfo.InvariantCulture));
         }
@@ -45,7 +45,7 @@ namespace Licao11_08_22IBM {
             }
         }
         static double SomaPreco(double precoA, double precoB) {
-            double resultado = precoA + precoB;
+            double resultado = precoA * precoB;
             return resultado;
         }
     }
